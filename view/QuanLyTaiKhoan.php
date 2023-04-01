@@ -79,7 +79,35 @@
 							header("location:QuanLyTaiKhoan.php");
 						}
 			?>
-			
+			<?php 
+						if(isset($_GET['id']))
+						{
+							$id=$_GET['id'];
+							
+							$qr=$db->execute('select * from nguoidung where MaND="'.$id.'"');
+							while($row = mysqli_fetch_assoc($qr))
+							{
+								echo '<div class="form">
+						Sửa người dùng.
+				<form method="post">
+				  <div class="mb-3">
+					  <label for="formGroupExampleInput" class="form-label">Tên</label>
+					  <input type="text" class="form-control" name="Ten" id="formGroupExampleInput" value="'.$row['Name'].'">
+					</div>
+					<div class="mb-3">
+					  <label for="formGroupExampleInput2" class="form-label">Email</label>
+					  <input type="email" class="form-control" name="Email" id="formGroupExampleInput2" value="'.$row['Email'].'">
+					</div>
+					<div class="mb-3">
+					  <label for="formGroupExampleInput2" class="form-label">Tài khoản</label>
+					  <input type="text" class="form-control" name="TK" id="formGroupExampleInput2" value="'.$row['TK'].'">
+					</div>
+					<button type="submit" name="sua" class="btn btn-primary">Sửa</button>				
+				</form>
+			</div>';
+							}
+						}
+			?>
   		</div>
 	</section>
 	
