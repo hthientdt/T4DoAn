@@ -63,17 +63,4 @@ td{
 	margin: 10 20 0 20;
 	
 }
-.butThaoTac{
-	background-color:#4287f5;
-	border-radius:10px;
-	color:white;
-	height:40px;
-	margin-left:20px;
-	
-}
-.butThaoTac:hover{
-	background-color:#84b1fa;
-}
-.butXoa{
-	color:red;
-}
+
