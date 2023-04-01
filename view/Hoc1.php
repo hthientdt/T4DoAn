@@ -64,7 +64,25 @@
 		
 	?>
 </html>
-
+<?php
+	if(isset($_POST['down']))
+	{
+		$_SESSION['data'][$_SESSION['tiendo']]->butDownOnclick($_POST['down']);
+		
+	}
+?>
+<?php
+	if(isset($_POST['top']))
+	{
+		$_SESSION['data'][$_SESSION['tiendo']]->butTopOnclick($_POST['top']);
+	}
+?>
+<?php
+	if(isset($_POST['next']))
+	{
+		$_SESSION['data'][$_SESSION['tiendo']]->butNextOnclick();
+	}
+?>
 
 
 
