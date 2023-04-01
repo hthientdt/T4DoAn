@@ -44,7 +44,41 @@
 			<form method="post">
 				<button type="submit" name="butthemMoi" class="butThaoTac">+ Thêm người dùng mới</button>
 			</form>
-				
+				<?php 
+					if(isset($_POST['butthemMoi']))
+					echo	'<div class="form">
+				Thêm người dùng.
+				<form method="post">
+				  <div class="mb-3">
+					  <label for="formGroupExampleInput" class="form-label">Tên</label>
+					  <input type="text" class="form-control" name="Ten" id="formGroupExampleInput" placeholder="Tên">
+					</div>
+					<div class="mb-3">
+					  <label for="formGroupExampleInput2" class="form-label">Email</label>
+					  <input type="email" class="form-control" name="Email" id="formGroupExampleInput2" placeholder="Email">
+					</div>
+					<div class="mb-3">
+					  <label for="formGroupExampleInput2" class="form-label">Tài khoản</label>
+					  <input type="text" class="form-control" name="TK" id="formGroupExampleInput2" placeholder="Tài khoản">
+					</div>
+					<div class="mb-3">
+					  <label for="formGroupExampleInput2" class="form-label">Mật khẩu</label>
+					  <input type="password" class="form-control" name="MK" id="formGroupExampleInput2" placeholder="Mật khẩu">
+					</div>
+					<button type="submit" name="Them" class="btn btn-primary">Thêm</button>				
+				</form>
+			</div>'
+				?>
+			
+			<?php 
+						if(isset($_POST['Them']))
+							$p->themUser($_POST['Ten'],$_POST['Email'],$_POST['TK'],$_POST['MK']);
+						if(isset($_POST['sua']))
+						{
+							$db->execute2('update nguoidung  set Name="'.$_POST['Ten'].'",Email="'.$_POST['Email'].'",TK="'.$_POST['TK'].'" where MaND="'.$_GET['id'].'"');
+							header("location:QuanLyTaiKhoan.php");
+						}
+			?>
 			
   		</div>
 	</section>
