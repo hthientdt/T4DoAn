@@ -39,13 +39,7 @@
 	overflow-y:auto;
 	margin: 10 20 20 20;
 }
-.bang{
-	border:1px solid black;
-	border-radius:10px;
-	background-color:#3377ff;
-	width:100%;
-	font-size:20px;
-}
+
 th{
 	border:1px solid black;
 	background-color:#ccddff;
