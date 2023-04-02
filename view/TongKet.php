@@ -12,5 +12,28 @@
 	
 </head>
 
-
+<body>
+	<center>
+	<div class='BangTk'>
+		
+			
+			<center>
+				<form class='choose' method='post'>
+					<input type='submit' name='end' class='butFinish' value='Kết thúc'>
+					<input type='submit' name='restart' class='butFinish' value='Thử lại'>				
+				</form>
+			</center>
+			<?php
+				if(isset($_POST['restart']))
+				{
+					restart();
+				}
+				if(isset($_POST['end']))
+				{
+					endLession();
+				}
+			?>
+	</div>
+	</center>
+</body>
 </html>
