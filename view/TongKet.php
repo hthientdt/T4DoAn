@@ -16,7 +16,9 @@
 	<center>
 	<div class='BangTk'>
 		
-			
+			<center><div class='head' > Tổng kế bài học</div></center>
+			<center><div class='dung1' > <?php echo 'Đúng: '.$_SESSION['DungSai'][0].' câu.';  ?></div></center>
+			<center><div class='sai1' > <?php echo 'Sai: '.$_SESSION['DungSai'][1].' câu.';  ?></div></center>
 			<center>
 				<form class='choose' method='post'>
 					<input type='submit' name='end' class='butFinish' value='Kết thúc'>
